@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+             http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+    <persistence-unit name="Postgres_DB">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.example.demo1.Model.Order</class>
+        <class>com.example.demo1.Model.User</class>
+        <class>com.example.demo1.Model.Customer</class>
+        <class>com.example.demo1.Model.Payment</class>
+        <class>com.example.demo1.Model.Review</class>
+        <class>com.example.demo1.Model.Cart</class>
+        <class>com.example.demo1.Model.GeoLocation</class>
+        <class>com.example.demo1.Model.PriceHistory</class>
+        <class>com.example.demo1.Model.Product</class>
+        <class>com.example.demo1.Model.ProductDropDown</class>
+        <class>com.example.demo1.Model.Seller</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/"/>
+            <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+            <property name="jakarta.persistence.jdbc.password" value="Dwwy011226@"/>
+            <property name="eclipselink.logging.level" value="FINE"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.globally_quoted_identifiers" value="true"/>
+            <property name="hibernate.globally_quoted_identifiers_skip_column_definitions" value="true"/>
+            <property name="hibernate.use_sql_comments" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.connection.provider_class" value="com.zaxxer.hikari.hibernate.HikariConnectionProvider" />
+            <property name="hibernate.hikari.minimumIdle" value="5" />
+            <property name="hibernate.hikari.maximumPoolSize" value="10" />
+            <property name="hibernate.hikari.idleTimeout" value="30000" />
+            <property name="hibernate.hikari.connectionTimeout" value="20000" />
+            <property name="hibernate.hikari.validationTimeout" value="5000" />
+            <property name="hibernate.hikari.dataSourceClassName" value="org.postgresql.ds.PGSimpleDataSource" />
+            <property name="hibernate.hikari.dataSource.serverName" value="localhost" />
+            <property name="hibernate.hikari.dataSource.portNumber" value="5432" />
+            <property name="hibernate.hikari.dataSource.databaseName" value="postgres" />
+            <property name="hibernate.hikari.dataSource.user" value="postgres" />
+            <property name="hibernate.hikari.dataSource.password" value="Dwwy011226@" />
+            <property name="hibernate.connection.release_mode" value="after_transaction" />
+        </properties>
+    </persistence-unit>
+</persistence>
